@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kirish</title>
+</head>
+<body>
+    <h1>Tizimga Kirish uchun:</h1>
+    <form method="post" action="{% url 'login' %}">{% csrf_token %}
+        <input type="text" name="l" placeholder="email yoki login" >
+        <input type="password" name="p" placeholder="parol" >
+        <button type="submit">Kirish</button>
+    </form>
+    <hr>
+    <a href="/user/reg/"><button>Royhatdan otish</button></a>
+</body>
+</html>
